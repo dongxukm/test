@@ -3,44 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pictures with Comments</title>
+    <title>Photo Wall with Comments</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            background-color: #f5f5f5;
         }
-        .picture-container {
-            margin: 20px auto;
+        .photo-wall {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .photo-wall .photo {
+            position: relative;
             width: 300px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s;
         }
-        .picture-container img {
-            max-width: 100%;
+        .photo-wall .photo:hover {
+            transform: scale(1.05);
+        }
+        .photo-wall img {
+            width: 100%;
             height: auto;
-            border-radius: 5px;
         }
         .comment {
-            margin-top: 10px;
+            padding: 15px;
             font-size: 16px;
-            color: #555;
+            color: #333;
+            background-color: #fafafa;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
-    <h1>Pictures with Comments</h1>
+    <h1>My Photo Wall</h1>
 
-    <div class="picture-container">
-        <img src="https://via.placeholder.com/300" alt="Picture 1">
-        <div class="comment">This is the first picture. It's a placeholder image, and you can replace it with any image you like.</div>
-    </div>
-
-    <div class="picture-container">
-        <img src="https://via.placeholder.com/300" alt="Picture 2">
-        <div class="comment">This is the second picture. Here’s another placeholder image, but feel free to replace it with something unique.</div>
+    <div class="photo-wall">
+        <div class="photo">
+            <img src="https://via.placeholder.com/300" alt="Picture 1">
+            <div class="comment">This is the first picture on the photo wall. Replace this with your own image and comment.</div>
+        </div>
+        <div class="photo">
+            <img src="https://via.placeholder.com/300" alt="Picture 2">
+            <div class="comment">This is the second picture on the photo wall. Customize it with a unique photo and description.</div>
+        </div>
     </div>
 
 </body>
